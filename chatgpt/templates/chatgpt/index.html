@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap demo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script>
+            function changeElement(){
+                document.getElementById("askelement").innerHTMl = "Listening"
+            }
+        </script>
+    </head>
+<style>
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    text-align: center;
+}
+.btn{
+    
+    text-align: center;
+    margin-left: 50px;
+    border: 1px solid #3498db;
+    padding: 10px 20px;
+    font-size: 30px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    
+
+}
+
+.btn:hover{
+    color: #3498db;
+    font-size: 25px;
+}
+
+.page-header{
+    font-size:60px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-top: 300px;
+    font-family: "montserrat";  
+    cursor: default;
+     
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+}
+
+
+@keyframes change {
+   
+    0%{
+        background-position: 0 50%; 
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+.Youtube{
+    margin-top: 10px;
+    text-align: top;
+p{
+    color: white;
+}
+}
+
+
+
+
+
+</style>
+<body>
+    <Section>
+    </div>
+    <div class="container">
+        <a href="index.html">
+            <button class="btn btn-dark">Home</button>
+            </a>
+        <a href="about.html">
+            <button class="btn btn-dark">About</button>
+            </a>
+        
+        <a href="contact.html">
+            <button class= "btn btn-dark">Chat Bot API</button>
+
+        
+</div>
+</div>
+    </div>
+
+    <form action="#" method="get">
+        <input type="submit" id="askbutton" class="btn btn-primary" value="Ask AI" onclick="changeElement" name="mybtn" style="margin-left: 620px">
+       </form>
+   
+</div>
+</Section>
+{% if response != "" %}
+    <p class="responsetext"> {{ response }} </p>
+    <style>
+        p{
+           color: white;
+           text-align: center;
+           font-size: 30px; 
+        }
+    </style>  
+{% endif %}
+</body>
+</html>
